@@ -39,7 +39,9 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/reMenu.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="js/inicio.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -48,6 +50,36 @@
 </head>
 
 <body>
+<div class="menu1" id='m1'>
+    <ul>
+        <li><a class="menu1one" href="index.html">Home</a></li>
+    </ul>
+
+    <ul>
+        <li style="z-index: 7070;"><a class="menu1two"
+            href="javascript:k=1;">Controle de Acesso <!--[if gte IE 7]><!--></a>
+            <!--<![endif]-->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <c:if test="${permissao.editaUser}">
+                                    <li><a href="operadores.html">Operadores</a></li>
+                                </c:if>
+                                <c:if test="${permissao.permisssoes}">
+                                    <li><a href="perfisAcesso.html">Permissões</a></li>
+                                </c:if>
+                                <li><a href="login.html">Sair</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> <!--[if lte IE 6]></a><![endif]--></li>
+    </ul>
+</div></div>
+
+
 <img src="img/logoCM_small.png">
 <br>
 <center>
@@ -69,7 +101,11 @@
     <span id="spanSaida"></span>
     <button onclick="getStatusDeAtendimento();">Função 1</button>
     <br>
+    <br>
+    <br>
     <button onclick="ws();">Função 2</button>
+    <br>
+    <br>
     <br>
     <button onclick="window.open('tela2.html','_top');">Função 3</button>
 
