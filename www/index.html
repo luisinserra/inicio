@@ -41,7 +41,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/inicio.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Hello World</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="http://printsource.jelasticlw.com.br">
 </head>
 
 <body>
@@ -62,9 +65,17 @@
         </div>
     </div>
 
+    <br>
+    <span id="spanSaida"></span>
+    <button onclick="getStatusDeAtendimento();">Função 1</button>
+    <br>
+    <button onclick="ws();">Função 2</button>
+    <br>
+    <button onclick="window.open('tela2.html','_top');">Função 3</button>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/urlen.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>
