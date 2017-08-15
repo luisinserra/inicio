@@ -64,7 +64,8 @@ function successRead(entries){
     alert("sucesso lendo");
      var i;
      var objectType;
-     alert("varrendo...");
+     var n=entries.length;
+     alert("varrendo "+n+"...");
      for (i=0; i < entries.length; i++) {
         if(entries[i].isDirectory == true) {
             objectType = 'Directory';
