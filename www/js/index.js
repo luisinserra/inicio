@@ -47,3 +47,31 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function startaLeitura(){
+     window.requestFileSystem(LocalFileSystem.PERSISTENT,0,  onFileSystemSuccess, onErrorRead);
+}
+
+function onFileSystemSuccess(fs) {
+    var dirReader = fs.root.createReader();
+    dirReader.readEntries(successRead,onErrorRead);
+}
+
+function successRead(entries){
+     var i;
+     var objectType;
+     for (i=0; i < entries.length; i++) {
+        if(entries[i].isDirectory == true) {
+            objectType = 'Directory';
+        } else {
+            objectType = 'File';
+        }
+        $('#dirList').append('<li><h3>' + entries[i].name + '</h3><p>' + entries[i].toURI() + '</p><p class="ui-li-aside">Type:<strong>' + objectType + '</strong></p></li>');
+    }
+    $('#dirList').listview("refresh");
+}
+
+function onErrorRead(error) {
+    alert("Failed to list directory contents: " + error.code);
+}
+

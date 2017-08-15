@@ -65,7 +65,7 @@
                         <td>
                             <ul>
                                 <c:if test="${permissao.editaUser}">
-                                    <li><a href="operadores.html">Operadores</a></li>
+                                    <li><a href="tela2.html">Chamada outra tela</a></li>
                                 </c:if>
                                 <c:if test="${permissao.permisssoes}">
                                     <li><a href="perfisAcesso.html">Permissões</a></li>
@@ -84,7 +84,7 @@
 <br>
 <center>
     <div class="box-Vermelho cantinhos" style="width: 300px;">
-    <B>ACESSO ADMINISTRATIVO 2 | MASTER</B>
+    <B>ACESSO ADMINISTRATIVO | MASTER</B>
     </div>
 </center>
 
@@ -108,6 +108,10 @@
     <br>
     <br>
     <button onclick="window.open('tela2.html','_top');">Função 3</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="startaLeitura();">Ler Arquivos</button>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -115,6 +119,13 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<span id="dirList"></span>
 </body>
 
 </html>
