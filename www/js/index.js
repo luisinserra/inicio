@@ -57,7 +57,7 @@ function onFileSystemSuccess(fs) {
     alert("Sucesso");
     var pathInicial=fs.root.fullPath;
     alert("Entrando com "+pathInicial+"...");
-    fs.root.fullPath = 'file:///mnt/sdcard/';
+    fs.root.fullPath = '/storage/sdcard1/';
     alert("mudou o path...");
     var dirReader = fs.root.createReader();
     alert("reader criado para ler de "+fs.root.fullPath+"...");
