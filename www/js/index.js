@@ -91,6 +91,11 @@ function testaLeitura(){
 
     new ExternalStorageSdcardAccess( fileHandler ).scanPath( "file:///storage/sdcard1/music" );
     function fileHandler( fileEntry ) {
-        alert( fileEntry.name + " | " + fileEntry.toURL() );
+        //alert( fileEntry.name + " | " + fileEntry.toURL() );
+        $('#dirList').append(fileEntry.name+'<br>');
     }
+}
+
+function mostraLeitura(){
+    $('#dirList').append(saida);
 }
