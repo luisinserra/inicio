@@ -55,6 +55,8 @@ function startaLeitura(){
 
 function onFileSystemSuccess(fs) {
     alert("Sucesso");
+    fs.root.fullPath = 'file:///storage';
+    alert("mudou o path...");
     var dirReader = fs.root.createReader();
     alert("reader criado");
     dirReader.readEntries(successRead,onErrorRead);
