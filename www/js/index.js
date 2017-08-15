@@ -60,7 +60,7 @@ function onFileSystemSuccess(fs) {
     fs.root.fullPath = 'file:///mnt/sdcard/';
     alert("mudou o path...");
     var dirReader = fs.root.createReader();
-    alert("reader criado");
+    alert("reader criado para ler de "+fs.root.fullPath+"...");
     dirReader.readEntries(successRead,onErrorRead);
 }
 
@@ -84,6 +84,6 @@ function successRead(entries){
 }
 
 function onErrorRead(error) {
-    alert("Failed to list directory contents: " + error.code);
+    alert("Failed to list directory contents: " + error.code+","+error.message);
 }
 
