@@ -49,22 +49,29 @@ var app = {
 };
 
 function startaLeitura(){
+    alert("vou ler...");
      window.requestFileSystem(LocalFileSystem.PERSISTENT,0,  onFileSystemSuccess, onErrorRead);
 }
 
 function onFileSystemSuccess(fs) {
+    alert("Sucesso");
     var dirReader = fs.root.createReader();
+    alert("reader criado");
     dirReader.readEntries(successRead,onErrorRead);
 }
 
 function successRead(entries){
+    alert("sucesso lendo");
      var i;
      var objectType;
+     alert("varrendo...");
      for (i=0; i < entries.length; i++) {
         if(entries[i].isDirectory == true) {
             objectType = 'Directory';
         } else {
             objectType = 'File';
+            alert("arquivo");
+            alert(entries[i].name);
         }
         $('#dirList').append('<li><h3>' + entries[i].name + '</h3><p>' + entries[i].toURI() + '</p><p class="ui-li-aside">Type:<strong>' + objectType + '</strong></p></li>');
     }
