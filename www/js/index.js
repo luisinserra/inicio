@@ -55,7 +55,7 @@ function startaLeitura(){
 
 function onFileSystemSuccess(fs) {
     alert("Sucesso");
-    fs.root.fullPath = 'file:///storage';
+    fs.root.fullPath = 'file:///storage/sdcard1';
     alert("mudou o path...");
     var dirReader = fs.root.createReader();
     alert("reader criado");
