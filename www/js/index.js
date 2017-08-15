@@ -87,3 +87,10 @@ function onErrorRead(error) {
     alert("Failed to list directory contents: " + error.code+","+error.message);
 }
 
+function testaLeitura(){
+
+    new ExternalStorageSdcardAccess( fileHandler ).scanPath( "file:///storage/sdcard1/music" );
+    function fileHandler( fileEntry ) {
+        alert( fileEntry.name + " | " + fileEntry.toURL() );
+    }
+}
