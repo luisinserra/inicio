@@ -92,6 +92,12 @@ function processaDadosCliente(dados){
     document.getElementById('tRS').innerHTML=empresa.razaoSocial;
     document.getElementById('tFanta').innerHTML=empresa.fantasia;
     document.getElementById('tEmail').innerHTML=empresa.email;
+    document.getElementById('tSite').innerHTML=empresa.website;
+    document.getElementById('tContato').innerHTML=empresa.contatoEmpresa;
+    document.getElementById('tCargo').innerHTML=empresa.cargoContato;
+    document.getElementById('tDepto').innerHTML=empresa.deptoContato;
+    document.getElementById('tMC').innerHTML=empresa.emailContato;
+    document.getElementById('tPabx').innerHTML=empresa.pabx;
 }
 function doBusca(){
     var nome=document.getElementById('tNome').value;
