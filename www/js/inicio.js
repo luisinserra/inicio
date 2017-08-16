@@ -85,3 +85,25 @@ function getNome(){
     var nome = window.localStorage.getItem('nome');
     return nome;
 }
+function processaDadosCliente(dados){
+    //var resposta=document.getElementById('hResp').value;
+    var empresa=dados;
+    document.getElementById('divResultado').style.display='block';
+    document.getElementById('tRS').innerHTML=empresa.razaoSocial;
+    document.getElementById('tFanta').innerHTML=empresa.fantasia;
+    document.getElementById('tEmail').innerHTML=empresa.email;
+}
+function doBusca(){
+    var nome=document.getElementById('tNome').value;
+    if (nome == ''){
+        alert("Informe o nome para pesquisa");
+        document.getElementById('tNome').focus();
+    } else {
+       var url = "http://printsource.jelasticlw.com.br/gestor/ajax/getRegistro.jsonx?Funcao=&nosuf=S&valor="+nome+"&nomeClasse=GtEmpresas&campo=fantasia&tipoCampo=String";
+       $.get(url, function(data){
+            var dados=getJson(data);
+            processaDadosCliente(dados);
+       });
+       
+    }
+}
