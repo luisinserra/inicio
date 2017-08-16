@@ -99,3 +99,15 @@ function testaLeitura(){
 function mostraLeitura(){
     $('#dirList').append(saida);
 }
+
+
+function chamaComParms(){
+    var nome=document.getElementById('tNome').value;
+    if (nome == ''){
+        alert("Informe o nome");
+        document.getElementById('tNome').focus();
+    } else {
+        window.localStorage.setItem('nome', nome);
+        window.open("tela2.html");
+    }
+}

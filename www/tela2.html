@@ -16,13 +16,17 @@
 <body>
 
 <center>Segunda tela</center>
+<br>
+<br>
+Recebi na chamada <b><span id="spanNome"></span></b>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/inicio.js"></script>
     <script type="text/javascript" src="js/urlen.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
 
+<script type="text/javascript">
+    var nome=getNome();
+    document.getElementById('spanNome').innerHTML=nome;
+</script>
 </body>
 </html>

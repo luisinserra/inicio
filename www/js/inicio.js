@@ -79,3 +79,9 @@ function ws(){
 );
 
 }
+
+
+function getNome(){
+    var nome = window.localStorage.getItem('nome');
+    return nome;
+}
