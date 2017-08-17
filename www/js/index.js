@@ -130,7 +130,8 @@ function populateDB(tx){
     tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
     alert("Inserindo...");
     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-    tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "'+nome+'")');
+    alert("inserido");
+    //tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "'+nome+'")');
 }
 
 
@@ -143,9 +144,7 @@ function successCB() {
 }
 
 function acessaDB(){
-    alert("setando db...");
     db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-    alert("setado primeiro");
 }
 
 
