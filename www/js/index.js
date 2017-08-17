@@ -169,6 +169,14 @@ function querySuccess(tx, results) {
             alert(""+id+") "+nome);
         }
     }
+    alert("Vai ler de qualquer forma...");
+        var n=results.rows.length;
+        for (var i=0; i< n; i++){
+            var resultado=results.rows.item(i);
+            var id=resultado.id;
+            var nome=resultado.data;
+            alert(""+id+") "+nome);
+        }
     // for an insert statement, this property will return the ID of the last inserted row
     console.log("Last inserted row ID = " + results.insertId);
 }
