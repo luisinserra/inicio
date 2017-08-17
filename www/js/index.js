@@ -159,7 +159,7 @@ function querySuccess(tx, results) {
     if (!results.rowsAffected) {
         console.log('No rows affected!');
         alert('No rows affected!');
-        return false;
+        //return false;
     } else {
         var n=results.rows.length;
         for (var i=0; i< n; i++){
