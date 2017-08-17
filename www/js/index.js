@@ -117,20 +117,25 @@ function gravaTexto(){
         alert("Informe o nome");
         document.getElementById('tNome').focus();
     } else {
+        alert("Vai chamar...");
         db.transaction(populateDB, errorCB, successCB);
+        alert("depois do chamado");
     }
 }
 
 function populateDB(tx){
+    alert("dropando...");
     tx.executeSql('DROP TABLE IF EXISTS DEMO');
+    alert("Criando...");
     tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+    alert("Inserindo...");
     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "'+nome+'")');
 }
 
 
 function errorCB(err) {
-    alert("Error processing SQL: "+err.code);
+    alert("Error processing SQL: "+err.code+":"+err.message);
 }
 
 function successCB() {
