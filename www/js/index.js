@@ -141,8 +141,6 @@ function acessaDB(){
     alert("setando db...");
     var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     alert("setado primeiro");
-    var myDB = window.sqlitePlugin.openDatabase({name: "mySQLite.db", location: 'default'});
-    alert("setando outro db...");
 }
 
 
