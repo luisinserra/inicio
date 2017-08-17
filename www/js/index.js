@@ -144,7 +144,7 @@ function successCB() {
 
 function acessaDB(){
     alert("setando db...");
-    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     alert("setado primeiro");
 }
 
