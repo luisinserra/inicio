@@ -1,4 +1,4 @@
-
+var saida="";
 
 var ExternalStorageSdcardAccess = function ( _fileHandler, _errorHandler ) {
 
@@ -37,6 +37,10 @@ var ExternalStorageSdcardAccess = function ( _fileHandler, _errorHandler ) {
             var dirReader = entry.createReader();
             dirReader.readEntries( function(entryList) {
                 entryList.forEach( function ( entr ) {
+                    if (saida != ''){
+                        saida+="\n";
+                    }
+                    saida+=entr.name;
                     _gotFiles( entr );
                 } );
             }, errorHandler );
