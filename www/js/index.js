@@ -179,6 +179,10 @@ function querySuccess(tx, results) {
             var nome=resultado.data;
             alert(""+id+") "+nome);
         }
+        return false;
+        /*
+        * Inserido por request do aplicativo
+        */
     // for an insert statement, this property will return the ID of the last inserted row
     console.log("Last inserted row ID = " + results.insertId);
 }
