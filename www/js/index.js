@@ -130,8 +130,10 @@ function populateDB(tx){
     tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
     alert("Inserindo...");
     tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-    alert("inserido");
-    //tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "'+nome+'")');
+    alert("inserido, vamos inserir outro...");
+    var nome=document.getElementById('tNome').value;
+    tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "'+nome+'")');
+    alert("Inserndo o segundo");
 }
 
 
