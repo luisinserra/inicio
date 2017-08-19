@@ -83,6 +83,7 @@ function ws(){
 
 function getNome(){
     var nome = window.localStorage.getItem('nome');
+    //window.localStorage.removeItem('nome');
     return nome;
 }
 function processaDadosCliente(dados){
